@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -106,13 +107,27 @@
     a {
       color: #0b6623;
     }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-title img {
+      height: 48px;
+      width: auto;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
     <header>
-      <h1>Enciclopedia Pinux</h1>
+      <div class="logo-title">
+        <img src="./Logo.png" alt="Logo Enciclopedia Pinux">
+        <h1>Enciclopedia Pinux</h1>
+      </div>
       <nav class="main-nav">
         <a href="index.html">Inicio</a> |
         <a href="informacion.html">Información</a> |
@@ -125,30 +140,44 @@
 
     <section id="origen">
       <h2>Los orígenes de Linux</h2>
-      <p>La historia de <strong>Linux</strong> está profundamente ligada al movimiento del <strong>software libre</strong> y a la filosofía del <strong>conocimiento compartido</strong>. Sus raíces se remontan a los sistemas <strong>Unix</strong>, desarrollados en los años 70 en los laboratorios Bell de AT&T, que introdujeron conceptos como la multitarea, los permisos de usuario y la estructura jerárquica de archivos.</p>
+      <p>La historia de <strong>Linux</strong> está profundamente ligada al movimiento del <strong>software
+          libre</strong> y a la filosofía del <strong>conocimiento compartido</strong>. Sus raíces se remontan a los
+        sistemas <strong>Unix</strong>, desarrollados en los años 70 en los laboratorios Bell de AT&T, que introdujeron
+        conceptos como la multitarea, los permisos de usuario y la estructura jerárquica de archivos.</p>
 
-      <p>En los años 80, <strong>Richard Stallman</strong> fundó el proyecto <strong>GNU</strong> (GNU’s Not Unix) para crear un sistema operativo completamente libre, sin restricciones de propiedad. GNU desarrolló herramientas esenciales —como compiladores, editores, bibliotecas y el shell—, pero aún faltaba el componente central: un núcleo funcional.</p>
+      <p>En los años 80, <strong>Richard Stallman</strong> fundó el proyecto <strong>GNU</strong> (GNU’s Not Unix) para
+        crear un sistema operativo completamente libre, sin restricciones de propiedad. GNU desarrolló herramientas
+        esenciales —como compiladores, editores, bibliotecas y el shell—, pero aún faltaba el componente central: un
+        núcleo funcional.</p>
 
-      <p>En 1991, <strong>Linus Torvalds</strong>, un estudiante finlandés de informática, anunció en un foro de Usenet que estaba trabajando en un pequeño sistema operativo inspirado en Unix. Lo compartió públicamente, invitando a otros a colaborar. Ese proyecto se transformó rápidamente en un esfuerzo global y comunitario.</p>
+      <p>En 1991, <strong>Linus Torvalds</strong>, un estudiante finlandés de informática, anunció en un foro de Usenet
+        que estaba trabajando en un pequeño sistema operativo inspirado en Unix. Lo compartió públicamente, invitando a
+        otros a colaborar. Ese proyecto se transformó rápidamente en un esfuerzo global y comunitario.</p>
 
       <blockquote>
         “Solo un pasatiempo, no será grande ni profesional como GNU.” — Linus Torvalds, 1991
       </blockquote>
 
-      <p>Al combinar el núcleo desarrollado por Torvalds con las herramientas del proyecto GNU, nació lo que hoy conocemos como <strong>GNU/Linux</strong>. En pocos años, se convirtió en una alternativa real a los sistemas privativos de la época.</p>
+      <p>Al combinar el núcleo desarrollado por Torvalds con las herramientas del proyecto GNU, nació lo que hoy
+        conocemos como <strong>GNU/Linux</strong>. En pocos años, se convirtió en una alternativa real a los sistemas
+        privativos de la época.</p>
     </section>
 
     <section id="expansion">
       <h2>Expansión y consolidación (1993–2000)</h2>
-      <p>Durante la década de los noventa, Linux comenzó a expandirse gracias al trabajo de comunidades voluntarias y grupos de usuarios. Surgieron las primeras <strong>distribuciones</strong> como:</p>
+      <p>Durante la década de los noventa, Linux comenzó a expandirse gracias al trabajo de comunidades voluntarias y
+        grupos de usuarios. Surgieron las primeras <strong>distribuciones</strong> como:</p>
 
       <ul>
         <li><strong>Slackware</strong> (1993), una de las más antiguas aún en activo.</li>
-        <li><strong>Debian</strong> (1993), que introdujo un sistema de paquetes sólido y una filosofía comunitaria.</li>
+        <li><strong>Debian</strong> (1993), que introdujo un sistema de paquetes sólido y una filosofía comunitaria.
+        </li>
         <li><strong>Red Hat Linux</strong> (1994), orientada a entornos empresariales y servidores.</li>
       </ul>
 
-      <p>Mientras tanto, el proyecto <strong>KDE</strong> (1996) y más tarde <strong>GNOME</strong> (1997) comenzaron a crear entornos gráficos amigables, acercando Linux a usuarios no técnicos. La cooperación internacional entre desarrolladores voluntarios fue un fenómeno sin precedentes.</p>
+      <p>Mientras tanto, el proyecto <strong>KDE</strong> (1996) y más tarde <strong>GNOME</strong> (1997) comenzaron a
+        crear entornos gráficos amigables, acercando Linux a usuarios no técnicos. La cooperación internacional entre
+        desarrolladores voluntarios fue un fenómeno sin precedentes.</p>
 
       <table class="retro">
         <thead>
@@ -184,36 +213,54 @@
 
     <section id="nueva-era">
       <h2>La era moderna: del escritorio a la nube</h2>
-      <p>En 2004, la compañía británica <strong>Canonical</strong> lanzó <strong>Ubuntu</strong>, una distribución centrada en la facilidad de uso, la estabilidad y la instalación sencilla. Esto marcó un antes y un después en la adopción de Linux entre usuarios domésticos.</p>
+      <p>En 2004, la compañía británica <strong>Canonical</strong> lanzó <strong>Ubuntu</strong>, una distribución
+        centrada en la facilidad de uso, la estabilidad y la instalación sencilla. Esto marcó un antes y un después en
+        la adopción de Linux entre usuarios domésticos.</p>
 
-      <p>Durante la década de 2010, Linux se consolidó como el motor invisible de Internet. Más del <strong>90% de los servidores web</strong> en todo el mundo utilizan Linux o sistemas basados en él. Además, el sistema operativo <strong>Android</strong> —presente en miles de millones de dispositivos móviles— se basa directamente en el kernel de Linux.</p>
+      <p>Durante la década de 2010, Linux se consolidó como el motor invisible de Internet. Más del <strong>90% de los
+          servidores web</strong> en todo el mundo utilizan Linux o sistemas basados en él. Además, el sistema operativo
+        <strong>Android</strong> —presente en miles de millones de dispositivos móviles— se basa directamente en el
+        kernel de Linux.
+      </p>
 
-      <p>Actualmente, Linux está presente en <strong>supercomputadoras, automóviles, satélites, routers, teléfonos y centros de datos</strong>. Su éxito demuestra que la colaboración abierta y el conocimiento compartido pueden construir tecnologías estables, seguras y sostenibles.</p>
+      <p>Actualmente, Linux está presente en <strong>supercomputadoras, automóviles, satélites, routers, teléfonos y
+          centros de datos</strong>. Su éxito demuestra que la colaboración abierta y el conocimiento compartido pueden
+        construir tecnologías estables, seguras y sostenibles.</p>
     </section>
 
     <section id="empresas">
       <h2>Empresas y organizaciones clave del software libre</h2>
-      <p>Aunque Linux nació de la colaboración comunitaria, numerosas empresas han contribuido al desarrollo, mantenimiento y promoción del software libre, ayudando a profesionalizarlo sin comprometer su espíritu abierto.</p>
+      <p>Aunque Linux nació de la colaboración comunitaria, numerosas empresas han contribuido al desarrollo,
+        mantenimiento y promoción del software libre, ayudando a profesionalizarlo sin comprometer su espíritu abierto.
+      </p>
 
       <div class="highlight">
         <strong>Red Hat (EE. UU.)</strong><br>
-        Fundada en 1993, es pionera en ofrecer soporte empresarial para Linux. Su distribución <strong>Red Hat Enterprise Linux (RHEL)</strong> es ampliamente usada en servidores corporativos. Red Hat demostró que el software libre puede ser sostenible y rentable, basando su modelo en servicios y soporte técnico.  
+        Fundada en 1993, es pionera en ofrecer soporte empresarial para Linux. Su distribución <strong>Red Hat
+          Enterprise Linux (RHEL)</strong> es ampliamente usada en servidores corporativos. Red Hat demostró que el
+        software libre puede ser sostenible y rentable, basando su modelo en servicios y soporte técnico.
         Desde 2019 pertenece a <strong>IBM</strong>, pero continúa siendo una fuerza clave en el desarrollo del kernel.
       </div>
 
       <div class="highlight">
         <strong>Canonical (Reino Unido)</strong><br>
-        Fundada por <strong>Mark Shuttleworth</strong> en 2004, lanzó <strong>Ubuntu</strong>, una distribución enfocada en la accesibilidad y la facilidad de uso. Canonical ha llevado Linux a empresas, centros educativos y servicios en la nube, además de colaborar con proyectos como <strong>Snap</strong> y <strong>WSL</strong> (Windows Subsystem for Linux).
+        Fundada por <strong>Mark Shuttleworth</strong> en 2004, lanzó <strong>Ubuntu</strong>, una distribución enfocada
+        en la accesibilidad y la facilidad de uso. Canonical ha llevado Linux a empresas, centros educativos y servicios
+        en la nube, además de colaborar con proyectos como <strong>Snap</strong> y <strong>WSL</strong> (Windows
+        Subsystem for Linux).
       </div>
 
       <div class="highlight">
         <strong>SUSE (Alemania)</strong><br>
-        Creada en 1992, fue una de las primeras empresas en ofrecer soluciones comerciales basadas en Linux. Con productos como <strong>SUSE Linux Enterprise</strong> y el proyecto comunitario <strong>openSUSE</strong>, mantiene un compromiso firme con la innovación y la estabilidad empresarial.
+        Creada en 1992, fue una de las primeras empresas en ofrecer soluciones comerciales basadas en Linux. Con
+        productos como <strong>SUSE Linux Enterprise</strong> y el proyecto comunitario <strong>openSUSE</strong>,
+        mantiene un compromiso firme con la innovación y la estabilidad empresarial.
       </div>
 
       <div class="highlight">
         <strong>Debian Project</strong><br>
-        No es una empresa, sino una comunidad global de voluntarios. <strong>Debian</strong> ha sido la base técnica y filosófica de muchas distribuciones modernas, incluyendo Ubuntu, Linux Mint y MX Linux.  
+        No es una empresa, sino una comunidad global de voluntarios. <strong>Debian</strong> ha sido la base técnica y
+        filosófica de muchas distribuciones modernas, incluyendo Ubuntu, Linux Mint y MX Linux.
         Su Contrato Social y su énfasis en la transparencia han influido en toda la cultura del software libre.
       </div>
 
@@ -222,14 +269,18 @@
         - <strong>Linux Foundation</strong>: coordina el desarrollo del kernel y promueve estándares abiertos.<br>
         - <strong>Mozilla Foundation</strong>: creadora de Firefox, defensora de una web libre.<br>
         - <strong>Google</strong>: contribuye al kernel y mantiene Android, basado en Linux.<br>
-        - <strong>Intel</strong> y <strong>AMD</strong>: colaboran en el soporte de hardware y optimización de controladores.
+        - <strong>Intel</strong> y <strong>AMD</strong>: colaboran en el soporte de hardware y optimización de
+        controladores.
       </div>
     </section>
 
     <section id="legado">
       <h2>Legado e impacto</h2>
-      <p>Más de tres décadas después de su creación, Linux representa un modelo alternativo al software privativo. Es una muestra de cómo la cooperación global puede producir soluciones tecnológicas de calidad, accesibles y sostenibles.</p>
-      <p>El éxito de Linux no radica solo en su código, sino en su comunidad: millones de personas que aportan tiempo, conocimiento y pasión para construir un futuro digital libre de barreras.</p>
+      <p>Más de tres décadas después de su creación, Linux representa un modelo alternativo al software privativo. Es
+        una muestra de cómo la cooperación global puede producir soluciones tecnológicas de calidad, accesibles y
+        sostenibles.</p>
+      <p>El éxito de Linux no radica solo en su código, sino en su comunidad: millones de personas que aportan tiempo,
+        conocimiento y pasión para construir un futuro digital libre de barreras.</p>
 
       <blockquote>
         “El software libre es una cuestión de libertad, no de precio.” — Richard Stallman
@@ -241,6 +292,5 @@
     </footer>
   </div>
 </body>
+
 </html>
-
-
