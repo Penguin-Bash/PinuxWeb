@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Enciclopedia Pinux — Contacto</title>
+
     <style>
         body {
             background: #e8e8e8;
@@ -29,6 +30,18 @@
             border: 1px solid #2b5f2b;
             padding: 12px 16px;
             border-radius: 4px;
+        }
+
+        
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-title img {
+            height: 48px;   
+            width: auto;
         }
 
         h1 {
@@ -98,7 +111,11 @@
 <body>
     <div class="container">
         <header>
-            <h1>Enciclopedia Pinux</h1>
+            <div class="logo-title">
+                <img src="./Logo.png" alt="Logo Enciclopedia Pinux">
+                <h1>Enciclopedia Pinux</h1>
+            </div>
+
             <nav class="main-nav">
                 <a href="index.html">Inicio</a> |
                 <a href="informacion.html">Información</a> |
@@ -111,17 +128,17 @@
 
         <section id="contacto">
             <h2>Contacto</h2>
-            <p>Si tienes dudas, sugerencias o quieres colaborar con nosotros, puedes enviarnos un mensaje a través del
-                siguiente formulario.
-                Estaremos encantados de leerte y responderte lo antes posible.</p>
+            <p>
+                Si tienes dudas, sugerencias o deseas colaborar con nosotros, puedes enviarnos un mensaje a través del siguiente formulario.
+                Estaremos encantados de leerte y responderte lo antes posible.
+            </p>
 
-            <!-- Formulario de google -->
+            
             <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSedbZFiIUzBGFpQYAJVKZm8KhsTpCARGmXW5Jcut9bg-vUEdw/viewform?usp=sharing&ouid=114692635855415523423"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSedbZFiIUzBGFpQYAJVKZm8KhsTpCARGmXW5Jcut9bg-vUEdw/viewform?usp=sharing"
                 frameborder="0" marginheight="0" marginwidth="0">
                 Cargando…
             </iframe>
-
         </section>
 
         <footer>
@@ -131,6 +148,5 @@
         <div class="clear"></div>
     </div>
 </body>
-
 
 </html>
