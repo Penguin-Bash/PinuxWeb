@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Enciclopedia Pinux — Guía para principiantes</title>
+  <style>
+    .admin-btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background: #2b5f2b;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      transition: 0.2s;
+    }
+
+    .admin-btn:hover {
+      background: #3c7d3c;
+    }
+
+    body {
+      background: #e8e8e8;
+      color: #111;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 28px auto;
+      background: #f4f7f2;
+      border: 2px solid #2b5f2b;
+      padding: 18px;
+      border-radius: 6px;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    header {
+      background: #d7f0d7;
+      border: 1px solid #2b5f2b;
+      padding: 12px 16px;
+      border-radius: 4px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #144014;
+    }
+
+    h2 {
+      color: #1b5b1b;
+      border-bottom: 1px dashed #9ccf9c;
+      padding-bottom: 6px;
+      margin-top: 26px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-title img {
+      height: 48px;
+      width: auto;
+    }
+
+    nav.main-nav {
+      background: #bce5bc;
+      border: 1px solid #2b5f2b;
+      border-radius: 4px;
+      margin-top: 10px;
+      padding: 6px 10px;
+      text-align: center;
+    }
+
+    nav.main-nav a {
+      color: #0b6623;
+      text-decoration: none;
+      margin: 0 8px;
+      font-weight: bold;
+    }
+
+    nav.main-nav a:hover {
+      text-decoration: underline;
+    }
+
+    ul,
+    ol {
+      margin-left: 24px;
+    }
+
+    .highlight {
+      background: #fff;
+      border: 1px solid #9ccf9c;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 12px 0;
+    }
+
+    code {
+      background: #fff;
+      border: 1px solid #cfe6cf;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    pre {
+      background: #fff;
+      border: 1px solid #9ccf9c;
+      padding: 8px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+
+    footer {
+      font-size: 12px;
+      color: #444;
+      margin-top: 18px;
+      border-top: 1px dashed #cfe6cf;
+      padding-top: 8px;
+      text-align: center;
+    }
+
+    .btn-distrosea {
+      display: inline-block;
+      background: #2b5f2b;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn-distrosea:hover {
+      background: #3a7f3a;
+    }
+
+    /* ------------------------ */
+    /*  MENÚ Y DESPLEGABLES     */
+    /* ------------------------ */
+
+    nav.main-nav {
+      background: #bce5bc;
+      border: 1px solid #2b5f2b;
+      border-radius: 4px;
+      margin-top: 10px;
+      padding: 6px 10px;
+    }
+
+    nav.main-nav ul.menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav.main-nav li {
+      position: relative;
+    }
+
+    nav.main-nav a {
+      color: #0b6623;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav.main-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Dropdown */
+    nav.main-nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #d7f0d7;
+      border: 1px solid #2b5f2b;
+      border-radius: 4px;
+      padding: 8px;
+      list-style: none;
+      min-width: 160px;
+      top: 22px;
+      left: 0;
+      z-index: 99;
+    }
+
+    nav.main-nav .dropdown-content li {
+      margin: 6px 0;
+    }
+
+    nav.main-nav .dropdown-content a {
+      font-weight: normal;
+    }
+
+    nav.main-nav .dropdown-content a:hover {
+      text-decoration: underline;
+    }
+
+    nav.main-nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* ------------------------ */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header style="display: flex; flex-direction: column; gap: 10px;">
+
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="logo-title">
+          <img src="./Logo.png" alt="Logo Enciclopedia Pinux">
+          <h1>Enciclopedia Pinux</h1>
+        </div>
+
+        <a class="admin-btn" href="admin-login.html">Panel admin</a>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="menu">
+
+          <li><a href="index.html">Inicio</a></li>
+
+          <!-- Nuestro proyecto -->
+          <li class="dropdown">
+            <a href="#">Nuestro proyecto ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="quienes-somos.html">Quiénes somos</a></li>
+              <li><a href="objetivos.html">Objetivos</a></li>
+              <li><a href="colabora.html">Cómo colaborar</a></li>
+            </ul>
+          </li>
+
+          <!-- Linux -->
+          <li class="dropdown">
+            <a href="#">Linux ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="info-linux.html">Información básica</a></li>
+              <li><a href="historia.html">Historia</a></li>
+              <li><a href="distros.html">Distribuciones</a></li>
+              <li><a href="guias.html">Guías</a></li>
+            </ul>
+          </li>
+
+          <!-- Merchandising -->
+          <li class="dropdown">
+            <a href="#">Merchandising ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="stickers.html">Stickers</a></li>
+              <li><a href="camisetas.html">Camisetas</a></li>
+              <li><a href="accesorios.html">Accesorios</a></li>
+            </ul>
+          </li>
+
+          <!-- Contacto -->
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <section id="intro">
+      <h2>Guía completa para iniciarte en Linux</h2>
+      <p>Dar el salto a <strong>Linux</strong> puede parecer complicado al principio, pero es una de las mejores
+        decisiones si buscas independencia tecnológica, rendimiento y sostenibilidad.
+        Esta guía está pensada para acompañarte paso a paso, desde la elección de tu distribución hasta tus primeros
+        comandos en la terminal.</p>
+
+      <p>Recuerda: no hay una sola forma correcta de usar Linux. Su fuerza está en la diversidad y en la libertad para
+        adaptarlo a tus necesidades.</p>
+    </section>
+
+    <section id="elegir">
+      <h2>1. Cómo elegir una distribución</h2>
+      <p>Una <strong>distribución</strong> (o “distro”) es una versión personalizada de Linux, con su propio instalador,
+        entorno gráfico y conjunto de programas. Todas comparten el mismo núcleo, pero se orientan a distintos perfiles
+        de usuario.</p>
+
+      <h3>Distribuciones recomendadas para principiantes:</h3>
+      <ul>
+        <li><strong><a href="https://distrowatch.com/table.php?distribution=ubuntu" target="_blank">Ubuntu</a>:</strong>
+          muy popular, fácil de usar, gran comunidad y soporte extendido.</li>
+        <li><strong><a href="https://distrowatch.com/table.php?distribution=mint" target="_blank">Linux
+              Mint</a>:</strong> similar a Windows en su aspecto, ideal para equipos modestos.</li>
+        <li><strong><a href="https://distrowatch.com/table.php?distribution=fedora" target="_blank">Fedora
+              Workstation</a>:</strong> enfocada en innovación y tecnologías recientes.</li>
+        <li><strong><a href="https://distrowatch.com/table.php?distribution=debian" target="_blank">Debian</a>:</strong>
+          una opción estable, con gran control sobre el sistema.</li>
+      </ul>
+
+      <div class="highlight">
+        💡 <strong>Consejo:</strong> prueba varias distribuciones en modo “Live USB” antes de instalarlas.
+        Así podrás explorarlas sin modificar tu disco duro.
+      </div>
+    </section>
+
+
+    <section id="distrosea">
+      <h2>🌐 Prueba Linux en tu navegador con DistroSea</h2>
+      <p>¿Quieres experimentar con Linux sin descargar ni instalar nada?
+        Con <strong><a href="https://distrosea.com/es/" target="_blank">DistroSea</a></strong> puedes probar decenas de
+        distribuciones directamente desde tu navegador web, de forma gratuita.</p>
+
+      <p>Es una excelente manera de explorar entornos como <em>Ubuntu</em>, <em>Fedora</em>, <em>Debian</em> o <em>Arch
+          Linux</em> sin modificar tu equipo ni crear un USB booteable.</p>
+
+      <div class="highlight">
+        🚀 <strong>Tip:</strong> Usa DistroSea para comparar diferentes escritorios (GNOME, KDE, XFCE, etc.) y descubrir
+        cuál se adapta mejor a ti antes de instalarlo en tu computadora.
+      </div>
+
+      <a href="https://distrosea.com/es/" target="_blank" class="btn-distrosea">Probar Linux ahora en DistroSea</a>
+    </section>
+
+
+    <section id="instalacion">
+      <h2>2. Instalación de Linux</h2>
+      <p>Instalar Linux es mucho más sencillo de lo que era hace unos años. La mayoría de las distribuciones modernas
+        tienen asistentes gráficos claros y traducidos a muchos idiomas.</p>
+
+      <h3>Pasos generales:</h3>
+      <ol>
+        <li>Descarga la imagen <strong>.ISO</strong> desde la página oficial de la distribución elegida.</li>
+        <li>Crea un <strong>USB booteable</strong> con programas como <em>Rufus</em>, <em>Ventoy</em> o
+          <em>BalenaEtcher</em>.
+        </li>
+        <li>Arranca tu equipo desde el USB.</li>
+        <li>Selecciona la opción “Probar” (Live Mode) o “Instalar”.</li>
+        <li>Elige idioma, zona horaria y distribución del teclado.</li>
+        <li>Decide si quieres conservar Windows (instalación dual) o usar solo Linux.</li>
+        <li>Completa el asistente y reinicia el equipo.</li>
+      </ol>
+
+      <div class="highlight">
+        ⚠️ Antes de instalar: haz una <strong>copia de seguridad</strong> de tus archivos importantes.
+        Aunque el proceso es seguro, siempre conviene tener respaldo.
+      </div>
+    </section>
+
+    <section id="primeros-pasos">
+      <h2>3. Primeros pasos después de instalar</h2>
+      <p>Una vez dentro de tu nuevo sistema Linux, hay algunas tareas básicas que te ayudarán a empezar con buen pie:
+      </p>
+
+      <ul>
+        <li><strong>Actualizar el sistema:</strong><br>
+          Abre la terminal y escribe:
+          <pre><code>sudo apt update && sudo apt upgrade</code></pre>
+          (en Ubuntu, Debian o Mint)
+          o
+          <pre><code>sudo dnf update</code></pre>
+          (en Fedora)
+        </li>
+
+        <li><strong>Instalar software básico:</strong><br>
+          Usa la tienda de software o comandos como:
+          <pre><code>sudo apt install libreoffice gimp vlc</code></pre>
+        </li>
+
+        <li><strong>Explorar el entorno:</strong><br>
+          Familiarízate con el menú de aplicaciones, el gestor de archivos y las configuraciones.</li>
+
+        <li><strong>Aprender comandos básicos:</strong><br>
+          Ver más abajo 👉</li>
+      </ul>
+    </section>
+
+    <section id="comandos">
+      <h2>4. Comandos básicos de Linux</h2>
+      <p>La terminal es una herramienta poderosa. No es obligatorio usarla, pero aprender lo esencial te da más control
+        sobre tu sistema.
+        Aquí algunos comandos que deberías conocer:</p>
+
+      <table class="highlight" style="width:100%">
+        <tr>
+          <th>Comando</th>
+          <th>Descripción</th>
+        </tr>
+        <tr>
+          <td><code>pwd</code></td>
+          <td>Muestra la carpeta actual.</td>
+        </tr>
+        <tr>
+          <td><code>ls</code></td>
+          <td>Lista los archivos del directorio.</td>
+        </tr>
+        <tr>
+          <td><code>cd carpeta</code></td>
+          <td>Cambia al directorio indicado.</td>
+        </tr>
+        <tr>
+          <td><code>mkdir nombre</code></td>
+          <td>Crea una carpeta nueva.</td>
+        </tr>
+        <tr>
+          <td><code>rm archivo</code></td>
+          <td>Elimina un archivo (usa con cuidado).</td>
+        </tr>
+        <tr>
+          <td><code>cp origen destino</code></td>
+          <td>Copia archivos o carpetas.</td>
+        </tr>
+        <tr>
+          <td><code>mv origen destino</code></td>
+          <td>Mueve o renombra archivos.</td>
+        </tr>
+        <tr>
+          <td><code>sudo</code></td>
+          <td>Ejecuta un comando con privilegios de administrador.</td>
+        </tr>
+        <tr>
+          <td><code>man comando</code></td>
+          <td>Muestra el manual de ayuda del comando.</td>
+        </tr>
+      </table>
+
+      <div class="highlight">
+        🐧 <strong>Tip:</strong> No tengas miedo de experimentar.
+        Cada error en la terminal es una oportunidad para aprender.
+      </div>
+    </section>
+
+    <section id="software">
+      <h2>5. Instalación de software y controladores</h2>
+      <p>Linux cuenta con <strong>repositorios oficiales</strong>, que son servidores donde se almacena y verifica el
+        software.
+        Esto hace que la instalación sea más segura que en otros sistemas.</p>
+
+      <ul>
+        <li>Usa el <strong>Centro de software</strong> para instalar programas gráficos fácilmente.</li>
+        <li>Desde la terminal, usa (en caso de que tu distro sea basada en debian o Ubuntu):
+          <pre><code>sudo apt install nombre-del-programa</code></pre>
+        </li>
+        <li>Para controladores de video o Wi-Fi, Ubuntu y Mint suelen detectarlos automáticamente.</li>
+      </ul>
+
+      <div class="highlight">
+        🔍 Si algo no funciona, busca en los foros de tu distribución.
+        Es muy probable que alguien ya haya tenido el mismo problema y lo haya resuelto.
+      </div>
+    </section>
+
+    <section id="comunidad">
+      <h2>6. Aprender de la comunidad</h2>
+      <p>Linux no es solo un sistema operativo: es una comunidad global.
+        Existen miles de foros, grupos y proyectos donde puedes aprender, compartir y contribuir.</p>
+
+      <ul>
+        <li><a href="https://www.reddit.com/r/linux/" target="_blank">Reddit /r/linux</a></li>
+        <li><a href="https://askubuntu.com" target="_blank">Ask Ubuntu</a></li>
+        <li><a href="https://forum.ubuntu-es.org" target="_blank">Foro Ubuntu en español</a></li>
+        <li><a href="https://linux.org" target="_blank">Linux.org</a></li>
+        <li><a href="https://open-source.guide" target="_blank">Guía para contribuir a proyectos de código abierto</a>
+        </li>
+      </ul>
+
+      <p>Participar en comunidades no solo te ayuda a resolver problemas, también te conecta con personas que comparten
+        tu interés por la libertad tecnológica y el aprendizaje colaborativo.</p>
+
+      <h3>¿Necesitas más ayuda?</h3>
+      <p>Si tienes preguntas o necesitas más asistencia, no dudes en hablar con <a href="https://chatgpt.com/"
+          target="_blank">ChatGPT</a>.</p>
+    </section>
+
+    <footer>
+      © 2025 Enciclopedia Pinux
+    </footer>
+  </div>
+</body>
+
+</html>

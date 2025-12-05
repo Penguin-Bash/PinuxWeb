@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Enciclopedia Pinux — Camisetas</title>
+  <style>
+    body {
+      background: #e8e8e8;
+      color: #111;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .admin-btn {
+      display: inline-block;
+      padding: 8px 12px;
+      background: #2b5f2b;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+      transition: 0.2s;
+    }
+
+    .admin-btn:hover {
+      background: #3c7d3c;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 28px auto;
+      background: #f4f7f2;
+      border: 2px solid #2b5f2b;
+      padding: 18px;
+      border-radius: 6px;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    header {
+      background: #d7f0d7;
+      border: 1px solid #2b5f2b;
+      padding: 12px 16px;
+      border-radius: 4px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #144014;
+    }
+
+    h2 {
+      color: #1b5b1b;
+      border-bottom: 1px dashed #9ccf9c;
+      padding-bottom: 6px;
+      margin-top: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+
+    th, td {
+      border: 1px solid #2b5f2b;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background: #bce5bc;
+    }
+
+    td img {
+      max-height: 80px;
+    }
+
+    .buy-link {
+      display: inline-block;
+      padding: 6px 10px;
+      background: #2b5f2b;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: 0.2s;
+    }
+
+    .buy-link:hover {
+      background: #3c7d3c;
+    }
+
+    nav.main-nav {
+      background: #bce5bc;
+      border: 1px solid #2b5f2b;
+      border-radius: 4px;
+      margin-top: 10px;
+      padding: 6px 10px;
+    }
+
+    nav.main-nav ul.menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav.main-nav li {
+      position: relative;
+    }
+
+    nav.main-nav a {
+      color: #0b6623;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav.main-nav a:hover {
+      text-decoration: underline;
+    }
+
+    nav.main-nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #d7f0d7;
+      border: 1px solid #2b5f2b;
+      border-radius: 4px;
+      padding: 8px;
+      list-style: none;
+      min-width: 160px;
+      top: 22px;
+      left: 0;
+      z-index: 99;
+    }
+
+    nav.main-nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-title img {
+      height: 48px;
+      width: auto;
+    }
+
+    footer {
+      font-size: 12px;
+      color: #444;
+      margin-top: 18px;
+      border-top: 1px dashed #cfe6cf;
+      padding-top: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="logo-title">
+          <img src="./Logo.png" alt="Logo Enciclopedia Pinux">
+          <h1>Enciclopedia Pinux</h1>
+        </div>
+        <a class="admin-btn" href="admin-login.html">Panel admin</a>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Nuestro proyecto ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="quienes-somos.html">Quiénes somos</a></li>
+              <li><a href="objetivos.html">Objetivos</a></li>
+              <li><a href="colabora.html">Cómo colaborar</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Linux ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="info-linux.html">Información básica</a></li>
+              <li><a href="historia.html">Historia</a></li>
+              <li><a href="distros.html">Distribuciones</a></li>
+              <li><a href="guias.html">Guías</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Merchandising ▾</a>
+            <ul class="dropdown-content">
+              <li><a href="stickers.html">Stickers</a></li>
+              <li><a href="camisetas.html">Camisetas</a></li>
+              <li><a href="accesorios.html">Accesorios</a></li>
+            </ul>
+          </li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="camisetas">
+      <h2>Camisetas de Pinux</h2>
+      <p>Explora nuestra colección de camisetas con motivos de Linux y Pinux. Perfectas para mostrar tu apoyo al software libre.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Camiseta</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Comprar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="https://m.media-amazon.com/images/I/B1EWx17iUcL._CLa%7C2140%2C2000%7C71uiocAvKBL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png" alt="Camiseta Tux"></td>
+            <td>Camiseta Tux</td>
+            <td>Camiseta con el icónico pingüino de Linux, disponible en varios colores.</td>
+            <td><a class="buy-link" href="https://www.amazon.es/Linux-camiseta-ping%C3%BCino-esmoquin-Camiseta/dp/B0B55LX2YW?dib=eyJ2IjoiMSJ9.79WcWo5eOLyhOG0Zu5M2uJdcIh7flEhwGvXwZHUxjj8siFflOD7wTFSt_k0dv8QhPjB_ZTdhxe4xQVYfFj2EaV6oTlHuACn5OaXu5f3MuSRX8yidS32LWtBTZRCqHJ-m-Xc8-pDq9rgq-hAHi0dyaU4RAPHwSXmuOfaQfDT7jlcdYlniKuxyNmP1_OTP2dAsTuncbwtdT0zW9HUsXsYlwg0-v-V-X0NKXCv2o1Pm4lB546SFdAuMnLBOb-VtjW9cUcqV5Y9qxoDp2gRjB3hvuKx-dyG9fREYEeeI30KSs20.4lQijdDcxsxhbdOTqlOZH9bmcNXJHuOC_zWmxVMCRMU&dib_tag=se&keywords=camiseta%2Blinux&qid=1764922605&sr=8-13&customId=B07537YF1C&customizationToken=MC_Assembly_1%23B07537YF1C&th=1&psc=1" target="_blank">Comprar</a></td>
+          </tr>
+          <tr>
+            <td><img src="https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C71nTv9daBaL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png" alt="Camiseta Linux Mint"></td>
+            <td>Camiseta Linux Mint</td>
+            <td>Camiseta con el logo de Linux Mint, cómoda y ligera para uso diario.</td>
+            <td><a class="buy-link" href="https://www.amazon.es/Linux-Mint-Privacidad-herramientas-integradas/dp/B0BXYQBG41?dib=eyJ2IjoiMSJ9.79WcWo5eOLyhOG0Zu5M2uJdcIh7flEhwGvXwZHUxjj8siFflOD7wTFSt_k0dv8QhPjB_ZTdhxe4xQVYfFj2EaV6oTlHuACn5OaXu5f3MuSRX8yidS32LWtBTZRCqHJ-m-Xc8-pDq9rgq-hAHi0dyaU4RAPHwSXmuOfaQfDT7jlcdYlniKuxyNmP1_OTP2dAsTuncbwtdT0zW9HUsXsYlwg0-v-V-X0NKXCv2o1Pm4lB546SFdAuMnLBOb-VtjW9cUcqV5Y9qxoDp2gRjB3hvuKx-dyG9fREYEeeI30KSs20.4lQijdDcxsxhbdOTqlOZH9bmcNXJHuOC_zWmxVMCRMU&dib_tag=se&keywords=camiseta%2Blinux&qid=1764922799&sr=8-48&customId=B07536XX75&customizationToken=MC_Assembly_1%23B07536XX75&th=1&psc=1" target="_blank">Comprar</a></td>
+          </tr>
+          <tr>
+            <td><img src="https://m.media-amazon.com/images/I/B1pppR4gVKL._CLa%7C2140%2C2000%7C91%2BC2-58FQL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png" alt="Camiseta Fedora"></td>
+            <td>Camiseta Fedora</td>
+            <td>Camiseta con el logotipo de Fedora, ideal para entusiastas del software libre.</td>
+            <td><a class="buy-link" href="https://www.amazon.es/Fedora-Linux-Software-multimedia-desarrollo/dp/B0C24FZMTV?dib=eyJ2IjoiMSJ9.LlAyZPyDh36Zc52tYtLtlr7CYZFVQSdL_4Jm4RCSsZV2RknxWlhGZ_FlA8_g4Ok4VlxLSqjLXmYwmUjonlWq7EEuLeqc7eYAC1PAeZgD6VwBJT_VJr5-i2ux2_RYoi-tjldy5GqZV9rVme_JlDeAke7Ww_wQFnJRUuDgvK5bO4cQI7bpqTsevzXNalLIE1SNAyphXAXcBnJx9aiDwADRdF7V7YfEXYzVjm3B8gLJK4PvEjWNQdJvrrwYX2MGNM_qPv12cQYH2B6lvbaINYk0_btQ2A8WQhNAscosbPiwgmQ.SQDibKZKJNhvwrq5OHppW5_dyRpBUT5WkY1oTxHMLqU&dib_tag=se&keywords=camiseta%2Blinux&qid=1764922811&sr=8-63&xpid=gohMFH3n6PJmw&customId=B07536XX75&customizationToken=MC_Assembly_1%23B07536XX75&th=1&psc=1" target="_blank">Comprar</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      © 2025 Proyecto Pinux
+    </footer>
+  </div>
+</body>
+
+</html>
