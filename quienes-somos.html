@@ -4,16 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Enciclopedia Pinux — Inicio</title>
+  <title>Enciclopedia Pinux — Quiénes somos</title>
   <style>
-    body {
-      background: #e8e8e8;
-      color: #111;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
     .admin-btn {
       display: inline-block;
       padding: 8px 12px;
@@ -28,6 +20,14 @@
 
     .admin-btn:hover {
       background: #3c7d3c;
+    }
+
+    body {
+      background: #e8e8e8;
+      color: #111;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     .container {
@@ -57,11 +57,17 @@
       color: #1b5b1b;
       border-bottom: 1px dashed #9ccf9c;
       padding-bottom: 6px;
-      margin-top: 20px;
     }
 
     p {
       line-height: 1.45;
+    }
+
+    blockquote {
+      background: #fff;
+      border-left: 4px solid #2b5f2b;
+      padding: 10px;
+      margin: 12px 0;
     }
 
     nav.main-nav {
@@ -112,6 +118,14 @@
       display: block;
     }
 
+    .highlight {
+      background: #fff;
+      border: 1px solid #9ccf9c;
+      padding: 10px;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+
     footer {
       font-size: 12px;
       color: #444;
@@ -119,14 +133,6 @@
       border-top: 1px dashed #cfe6cf;
       padding-top: 8px;
       text-align: center;
-    }
-
-    .clear {
-      clear: both;
-    }
-
-    a {
-      color: #0b6623;
     }
 
     .logo-title {
@@ -143,10 +149,8 @@
 </head>
 
 <body>
-
   <div class="container">
-
-    <header>
+    <header style="display: flex; flex-direction: column; gap: 10px;">
       <div style="display: flex; align-items: center; justify-content: space-between;">
         <div class="logo-title">
           <img src="./Logo.png" alt="Logo Enciclopedia Pinux">
@@ -195,46 +199,30 @@
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
-
     </header>
 
-    <section id="bienvenida">
-      <h2>Bienvenidos a Enciclopedia Pinux</h2>
-      <p>¡Saludos cordiales! Nos alegra que hayas llegado hasta aquí.
-        Esta web está dedicada a quienes quieren explorar el mundo de <strong>Linux</strong> y el <strong>software
-          libre</strong>,
-        aprender sobre su historia, entender sus principios y descubrir cómo aprovecharlo para mantener sus sistemas
-        actualizados y sostenibles.</p>
+    <section id="quienes-somos">
+      <h2>Quiénes somos</h2>
+      <p><strong>Pinux</strong> es una iniciativa creada para <strong>incentivar el uso de Linux</strong> como una
+        alternativa libre, moderna y sostenible frente a los modelos cerrados y desechables del software comercial.</p>
 
-      <p>En nuestras secciones encontrarás desde información básica, historia detallada, guías de uso paso a paso, hasta
-        recursos y enlaces útiles para profundizar en tus conocimientos.
-        Esperamos que disfrutes la experiencia y te inspires a formar parte de la comunidad Linux.</p>
+      <p>Con el fin del soporte oficial de <strong>Windows 10</strong>, millones de ordenadores perfectamente
+        funcionales han sido declarados “obsoletos” por Microsoft. Esto genera una gran cantidad de <strong>residuos
+          electrónicos</strong> y alimenta la obsolescencia programada.</p>
 
-      <p>¡Bienvenido y feliz aprendizaje!</p>
+      <div class="highlight">
+        <strong>Pinux defiende una filosofía diferente:</strong> aprovechar, reparar, aprender y compartir.
+      </div>
+
+      <blockquote>
+        “El verdadero poder del software libre no está solo en el código, sino en la libertad de elegir y aprender.”
+      </blockquote>
     </section>
 
     <footer>
-      © 2025 Enciclopedia Pinux
-      <br>Cordiales saludos a todos nuestros visitantes.
+      © 2025 Proyecto Pinux
     </footer>
-
-    <div class="clear"></div>
   </div>
-
-  <script>
-    const contadorNombre = "pinuxweb_visitas";
-
-    fetch(`https://api.counterapi.dev/v1/${contadorNombre}/incr`)
-      .then(res => res.json())
-      .then(data => console.log("Visitas incrementadas:", data.count))
-      .catch(err => console.error("Error contador:", err));
-
-    fetch(`https://api.counterapi.dev/v1/${contadorNombre}`)
-      .then(res => res.json())
-      .then(data => document.getElementById("totalVisitas").textContent = data.count)
-      .catch(() => document.getElementById("totalVisitas").textContent = "Error");
-  </script>
-
 </body>
 
 </html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Enciclopedia Pinux — Distribuciones</title>
+    <style>
+        body {
+            background: #e8e8e8;
+            color: #111;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 28px auto;
+            background: #f4f7f2;
+            border: 2px solid #2b5f2b;
+            padding: 18px;
+            border-radius: 6px;
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+        }
+
+        header {
+            background: #d7f0d7;
+            border: 1px solid #2b5f2b;
+            padding: 12px 16px;
+            border-radius: 4px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #144014;
+        }
+
+        h2 {
+            color: #1b5b1b;
+            border-bottom: 1px dashed #9ccf9c;
+            padding-bottom: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 18px;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #2b5f2b;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        table th {
+            background: #bce5bc;
+            color: #0b6623;
+        }
+
+        table img {
+            max-width: 80px;
+            height: auto;
+            display: block;
+        }
+
+        a.download-link {
+            display: inline-block;
+            padding: 6px 10px;
+            background: #2b5f2b;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        a.download-link:hover {
+            background: #3c7d3c;
+        }
+
+        nav.main-nav {
+            background: #bce5bc;
+            border: 1px solid #2b5f2b;
+            border-radius: 4px;
+            margin-top: 10px;
+            padding: 6px 10px;
+        }
+
+        nav.main-nav ul.menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav.main-nav li {
+            position: relative;
+        }
+
+        nav.main-nav a {
+            color: #0b6623;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav.main-nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav.main-nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #d7f0d7;
+            border: 1px solid #2b5f2b;
+            border-radius: 4px;
+            padding: 8px;
+            list-style: none;
+            min-width: 160px;
+            top: 22px;
+            left: 0;
+            z-index: 99;
+        }
+
+        nav.main-nav .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-title img {
+            height: 48px;
+            width: auto;
+        }
+
+        .admin-btn {
+            display: inline-block;
+            padding: 8px 12px;
+            background: #2b5f2b;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            transition: 0.2s;
+        }
+
+        .admin-btn:hover {
+            background: #3c7d3c;
+        }
+
+        footer {
+            font-size: 12px;
+            color: #444;
+            margin-top: 18px;
+            border-top: 1px dashed #cfe6cf;
+            padding-top: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div class="logo-title">
+                    <img src="./Logo.png" alt="Logo Enciclopedia Pinux">
+                    <h1>Enciclopedia Pinux</h1>
+                </div>
+                <a class="admin-btn" href="admin-login.html">Panel admin</a>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#">Nuestro proyecto ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                            <li><a href="objetivos.html">Objetivos</a></li>
+                            <li><a href="colabora.html">Cómo colaborar</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Linux ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="info-linux.html">Información básica</a></li>
+                            <li><a href="historia.html">Historia</a></li>
+                            <li><a href="distros.html">Distribuciones</a></li>
+                            <li><a href="guias.html">Guías</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Merchandising ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="stickers.html">Stickers</a></li>
+                            <li><a href="camisetas.html">Camisetas</a></li>
+                            <li><a href="accesorios.html">Accesorios</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="distros">
+            <h2>Distribuciones de Linux</h2>
+            <p>Aquí te presentamos algunas de las distribuciones de Linux más populares. Puedes ver su logo, una breve
+                descripción, una imagen del escritorio y acceder a la página oficial de descarga si quieres probarlas.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Logo</th>
+                        <th>Distribución</th>
+                        <th>Descripción</th>
+                        <th>Descarga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="https://logos-marcas.com/wp-content/uploads/2020/11/Ubuntu-Emblema-650x366.png"
+                                alt="Ubuntu"></td>
+                        <td>Ubuntu</td>
+                        <td>Distribución muy popular, fácil de usar y con gran soporte comunitario.</td>
+                        <td><a class="download-link" href="https://ubuntu.com/download/desktop"
+                                target="_blank">Descargar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://cdn3.emoji.gg/emojis/96830-linux-mint-logo.png" alt="Linux Mint"></td>
+                        <td>Linux Mint</td>
+                        <td>Distribución basada en Ubuntu, amigable para principiantes, muy estable y ligera.</td>
+                        <td><a class="download-link" href="https://www.linuxmint.com/download.php"
+                                target="_blank">Descargar</a></td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://antowen.altervista.org/blog/wp-content/uploads/2015/05/fedora-logo.png"
+                                alt="Fedora"></td>
+                        <td>Fedora</td>
+                        <td>Distribución innovadora con versiones actualizadas y enfoque en tecnologías libres.</td>
+                        <td><a class="download-link" href="https://fedoraproject.org/es/" target="_blank">Descargar</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="https://www.liblogo.com/img-logo/de2919d43e--logo--the-universal-operating-system.png"
+                                alt="Debian"></td>
+                        <td>Debian</td>
+                        <td>Distribución robusta y estable, muy utilizada como base para otros sistemas como Ubuntu.
+                        </td>
+                        <td><a class="download-link" href="https://www.debian.org/index.es.html"
+                                target="_blank">Descargar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <footer>
+            © 2025 Proyecto Pinux
+        </footer>
+    </div>
+</body>
+
+</html>
