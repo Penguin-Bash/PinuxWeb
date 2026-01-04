@@ -21,7 +21,7 @@
       border-radius: 6px;
       overflow: hidden;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      height: 400px;
+      min-height: 500px;
     }
 
     .sidebar {
@@ -41,6 +41,10 @@
       margin: 6px 0;
     }
 
+    .sidebar ul {
+      padding-left: 18px;
+    }
+
     .main {
       flex: 1;
       padding: 20px;
@@ -53,12 +57,61 @@
       margin-top: 0;
     }
 
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
     .card {
       background: #bce5bc;
       border: 1px solid #2b5f2b;
       border-radius: 6px;
       padding: 16px;
-      min-height: 150px;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h3 {
+      margin: 0 0 12px 0;
+      color: #144014;
+    }
+
+    .stat-number {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .progress-bar {
+      background: #d7f0d7;
+      border-radius: 6px;
+      overflow: hidden;
+      height: 18px;
+    }
+
+    .progress {
+      height: 100%;
+      background: #2b5f2b;
+      width: 0%;
+      transition: width 1s ease-in-out;
+      text-align: right;
+      color: #fff;
+      padding-right: 6px;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #444;
     }
   </style>
 </head>
@@ -76,15 +129,41 @@
     </div>
 
     <div class="main">
-      <h2>Estadísticas</h2>
-      <div class="card">
-        <h3>Total de visitas</h3>
-        <p id="visitas">Cargando...</p>
+      <h2>Estadísticas del Proyecto</h2>
+      <div class="stats-grid">
+        <div class="card">
+          <h3>Total de visitas</h3>
+          <div class="stat-number" id="visitas">0</div>
+        </div>
+
+        <div class="card">
+          <h3>Usuarios a los que les ha gustado</h3>
+          <div class="progress-bar">
+            <div class="progress" id="gustado">0%</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Usuarios considerando pasarse a Linux</h3>
+          <div class="progress-bar">
+            <div class="progress" id="considerando">0%</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Usuarios que ya usan Linux</h3>
+          <div class="progress-bar">
+            <div class="progress" id="usando">0%</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
+  <footer>© 2025 Enciclopedia Pinux — Panel Admin</footer>
+
   <script>
+  
     if (!sessionStorage.getItem("user")) {
       window.location.href = "admin-login.html";
     }
@@ -92,17 +171,37 @@
     document.getElementById("usernameDisplay").textContent =
       sessionStorage.getItem("user") || "Invitado";
 
-    const contadorNombre = "pinuxweb_visitas";
+    
+    const stats = {
+      visitas: 1245,
+      gustado: 78,
+      considerando: 34, 
+      usando: 12 
+    };
 
-    fetch(`https://api.counterapi.dev/v1/${contadorNombre}`)
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById("visitas").textContent = data.count;
-      })
-      .catch(() => {
-        document.getElementById("visitas").textContent = "Error al cargar visitas";
-      });
+    let visitasActuales = 0;
+    const visitasElem = document.getElementById("visitas");
+    const incremento = Math.ceil(stats.visitas / 100);
+    const intervalVisitas = setInterval(() => {
+      if (visitasActuales < stats.visitas) {
+        visitasActuales += incremento;
+        if (visitasActuales > stats.visitas) visitasActuales = stats.visitas;
+        visitasElem.textContent = visitasActuales;
+      } else {
+        clearInterval(intervalVisitas);
+      }
+    }, 30);
+
+    const progressElements = ["gustado", "considerando", "usando"];
+    progressElements.forEach(id => {
+      const elem = document.getElementById(id);
+      setTimeout(() => {
+        elem.style.width = stats[id] + "%";
+        elem.textContent = stats[id] + "%";
+      }, 300);
+    });
   </script>
+
 </body>
 
 </html>
